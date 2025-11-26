@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delikcee | We offer best meal</title>
+    <link rel="icon" href="/public/logo.jpg">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+        <div id="nav-container">
+            <div id="header-logo">
+                <img src="/public/logo.jpg" id="logo" alt="Delikcee Logo" />
+                <h2>Delikcee</h2>
+            </div>
+            <div class="mobile-menu-overlay" id="mobileMenu">
+                  <ul class="nav-links-mobile">
+                    <li><a href="#hero-section" onclick="closeMenu()">Home</a></li>
+                      <li><a href="#our-delicacy" onclick="closeMenu()">Gallery</a></li>
+                      <li><a href="#our-story" onclick="closeMenu()">About Us</a></li>
+                      <li><a href="#visit-us" onclick="closeMenu()">Contact</a></li>
+                  </ul>
+            </div>
+            <nav>
+                <div class="menu-icon" id="menu-icon" onclick="onClickMenu()">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#our-delicacy">Gallery</a></li>
+                    <li><a href="#our-story">About Us</a></li>
+                    <li><a href="#visit-us">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+      <div id="hero-section">
+        <div id="hero-left">
+          <h1>NIGERIAN DELICACY</h1>
+          <p>Experience the rich and diverse flavors of Nigerian cuisine with our expertly crafted dishes, made from traditional recipes and fresh ingredients.</p>
+          <img src="/public/img/Seafood-okro.jpg" alt="" id="hero-img">
+          <button id="menu-btn">ORDER NOW</button>
+        </div>
+        <div id="hero-right">
+          <img src="/public/img/hero.gif"></img>
+        </div>
+      </div>
+
+      <div id="our-story">
+        <div id="story-heading">
+          <h2>OUR STORY</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div id="story-main">
+          <div id="story">
+            <h3>Taste the Heart of Nigeria</h3>
+            <p>At DELIKCEE, we bring the vibrant essence of Nigerian cuisine to your table. Our passion lies in preserving authentic recipes passed down through generations while presenting them with a modern touch.
+
+                <br> <br>Every dish tells a story of rich culture, warm hospitality, and the diverse flavors that make Nigerian food truly exceptional. From the spicy aroma of our Jollof Rice to the hearty comfort of Egusi Soup, we celebrate Nigeria's culinary heritage.
+
+                <br> <br>Join us on a flavorful journey through Nigeria, one delicious bite at a time.
+            </p>
+          </div>
+          <div id="story-img">
+            <img src="/public/img/afang.jfif" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div id="our-delicacy">
+        <div id="delicacy-heading">
+          <h2>Our Delicacies</h2>
+          <div class="title-underline"></div>
+          <p>Discover our selection of traditional Nigerian dishes</p>
+        </div>
+        <div class="menu-wrapper">
+              <div class="menu">         
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="/public/img/jellof.jpg" alt="Jollof Rice">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Jollof Rice</h3>
+                        <p>The crown jewel of West African cuisine - perfectly seasoned rice cooked in a rich tomato sauce with aromatic spices</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="/public/img/egusi.jfif" alt="Egusi Soup">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Egusi Soup</h3>
+                        <p>A hearty melon seed soup enriched with vegetables, protein, and traditional spices, served with your choice of swallow</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="/public/img/suya.jfif" alt="Suya">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Suya</h3>
+                        <p>Spicy grilled meat skewers marinated in our special blend of groundnut spice mix - a street food favorite</p>
+                    </div>
+                </div>
+              </div>
+              <div class="menu">
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="/public/img/ofe nsala.jfif" alt="Pounded Yam">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Pounded Yam & White Soup</h3>
+                        <p>Smooth, stretchy pounded yam served with your choice of traditional Nigerian soup</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="/public/img/moi-moi-rollup.jpg" alt="Moi Moi">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Moi Moi</h3>
+                        <p>Steamed bean pudding made from black-eyed peas, onions, and spices - a protein-rich delicacy</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="/public/img/pepper soup.webp" alt="Pepper Soup">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Pepper Soup</h3>
+                        <p>A spicy, aromatic broth with meat or fish, infused with traditional herbs and spices</p>
+                    </div>
+                </div>
+              </div>
+          
+        </div>
+        <button id="see-more-btn">See More ⬇</button>
+      </div>
+
+      <div id="our-gallery">
+        <div id="gallery-heading">
+          <h2>Our Gallery</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="slider-container">
+          
+
+          <div class="main-image">
+            <div id="controller">
+              <button id="leftBtn" class="nav-btn">&#10094;</button>
+              <img id="mainDisplay" src="/public/img/vegetable.jpg" alt="">
+              <button id="rightBtn" class="nav-btn">&#10095;</button>
+            </div>
+            <h3 id="caption">Fufu vibes, Vegetable soup on fleek</h3>
+            <button class="caption-btn">Order Now</button>
+          </div>
+
+          <div class="thumb-row" id="thumbRow">
+            <img src="/public/img/Amala-and-Ewedu.jpeg" data-caption="Owambe-level amala—mad o!">
+            <img src="/public/img/c and c.jpg" data-caption="Chicken crispy, chips on vibes">
+            <img src="/public/img/jellof-rice.jfif" data-caption="Naija Jollof—premium vibes only">
+            <img src="/public/img/fried-rice.jfif" data-caption="Fried rice wey dey give premium vibes.">
+            <img src="/public/img/chop-1-1.jpg" data-caption="No small talk, just small chops.">
+            <img src="/public/img/Seafood-okro.jpg" data-caption="Okro + seafood = premium enjoyment">
+            <img src="/public/img/spag.jpeg" data-caption="Spag & turkey—no misses, just hits.">
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div id="visit-us">
+        <div id="visit-heading">
+          <h2>Visit Us</h2>
+          <div class="title-underline">
+          </div>
+        </div>
+
+        <div id="visit-wrapper">
+          <div id="visit-details-wrapper">
+            <div class="visit-details">
+              <h3>Location</h3>
+              <p>59 Omololu Street,
+                <br> Lagos, Nigeria</p>
+            </div>
+            <div class="visit-details">
+              <h3>Hours</h3>
+              <p>Monday - Friday: 11am - 10pm
+                <br>
+                Saturday - Sunday: 10am - 11pm
+              </p>
+            </div>
+            <div class="visit-details">
+              <h3>Contact</h3>
+              <p>Phone: +234 915 658 2492
+                 <br>
+                Email: info@delikcee.com
+            </div>
+            <div id="socials">
+              <img src="/public/icons/fb.jfif" alt="fb-logo" class="logos">
+              <img src="/public/icons/linkedin.jfif" alt="linkedin" class="logos">
+              <img src="/public/icons/twitter.jfif" alt="x-logo" class="logos">
+              <img src="/public/icons/youtube.jfif" alt="youtube" class="logos">
+            </div>
+          </div>
+          <div id="Contact-us">
+            <h2>Ready to Experience Authentic Nigerian Flavors?</h2>
+            <p>Come visit us today or place an order for delivery</p>
+            <button>Call Now</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <script src="/scripts.js"></script>
+  </body>
+</html>
