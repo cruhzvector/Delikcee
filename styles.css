@@ -232,7 +232,7 @@
     text-align: center;
   }
   .menu-image > img {
-    width: 250px;
+    width: 290px;
   }
 
   .menu {
@@ -240,19 +240,21 @@
     flex-direction: column;
     gap: 60px;
   }
-  .menu-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-  }
+
   .menu-card {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    width: 290px;
   }
+
+  .menu-content{
+    padding: 10px 25px;
+  }
+  .menu-content > p{
+   text-align: justify;
+  }
+
   .menu-wrapper {
     max-height: calc(
       3 * 320px + 2 * 20px
@@ -338,18 +340,19 @@
   }
 
    .main-image > button {
-    margin-top: 15px;
-    font-size: 16px;
-    padding: 13px;
+     padding: 10px 15px;
     border: none;
-    border-radius: 20px;
-    background-color: rgb(250, 238, 197);
+    border-radius: 10px;
+    background-color: rgb(65, 55, 45);
+    color: white;
     font-weight: bold;
+    font-family: "jost";
   }
 
   .main-image > button:hover {
-    background-color: rgb(65, 55, 45);
-    color: white;
+     background-color: rgb(250, 227, 201);
+    color: #333;
+    transition: 0.4s;
   }
 
   #visit-us {
