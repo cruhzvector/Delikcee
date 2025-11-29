@@ -68,12 +68,24 @@
     transform-origin: center;
 }
 
+.menu-icon.active #bar1 {
+    transform: rotate(45deg) translate(5px, 2px);
+}
+
+.menu-icon.active #bar2 {
+    opacity: 0; 
+}
+
+.menu-icon.active #bar3 {
+    transform: rotate(-45deg) translate(5px, -2px);
+}
+
 
 /* Full-screen Mobile Menu Overlay */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
-    left: -26%;
+    left: -28%;
     width: 100%;
     background: rgba(65, 55, 45, 0.98);
     backdrop-filter: blur(30px);
@@ -139,7 +151,7 @@
   #nav-container {
     display: flex;
     justify-content: center;
-    gap: 180px;
+    gap: 160px;
     align-items: center;
     width: 100%;
   }
