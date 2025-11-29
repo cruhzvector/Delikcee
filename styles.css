@@ -14,11 +14,19 @@
     src: url(/public/font/Lobster/Lobster-Regular.ttf);
   }
 
+  @font-face {
+    font-family: 'jamjuree';
+    src: url(/public/font/Bai_Jamjuree/BaiJamjuree-Bold.ttf);
+  }
 
+   @font-face {
+    font-family: 'jamjuree-light';
+    src: url(/public/font/Bai_Jamjuree/BaiJamjuree-Light.ttf);
+  }
   
 
   body {
-    font-family: "jost";
+    font-family: "jamjuree", "jost", "lobster", "jamjuree-light", sans-serif;
     background-color: #FAF8F0;
     padding: 0 !important;
     margin: 0x !important;
@@ -64,8 +72,8 @@
 /* Full-screen Mobile Menu Overlay */
 .mobile-menu-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -50%;
+    left: -26%;
     width: 100%;
     background: rgba(65, 55, 45, 0.98);
     backdrop-filter: blur(30px);
@@ -136,6 +144,10 @@
     width: 100%;
   }
 
+  #hero-img{
+    width: 250px;
+  }
+
   #hero-left {
     display: flex;
     flex-direction: column;
@@ -157,112 +169,99 @@
     width: 300px;
     text-align: center;
   }
-  #hero-right > img {
-    display: none;
-  }
-  #hero-img {
-    display: block;
-    width: 300px;
-  }
-  #menu-btn {
-          position: relative;
-        padding: 10px 22px;
-        border-radius: 6px;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        background-color: rgb(65, 55, 45);
-        font-size: 16px;
-        transition: all 0.2s ease;
-        font-family: 'jost';
-        font-weight: bold;
-  }
 
-  #menu-btn:active {
-     transform: scale(0.96);
-      transition: all 0.2s ease;
-  }
+ .animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: ;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #1f387e;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-
-  #menu-btn:before,
-#menu-btn:after {
+.animated-button svg {
   position: absolute;
-  content: "";
-  width: 150%;
+  width: 24px;
+  fill: #1f387e;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  height: 100%;
-  transform: translateX(-50%);
-  z-index: -1000;
-  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #c5e5e4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-#menu-btn:hover:before {
-  top: -70%;
-  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-    10% 10%, 18% 18%;
-  background-position: 50% 120%;
-  animation: greentopBubbles 0.6s ease;
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-@keyframes greentopBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
-  }
-
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
-  }
-
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
 }
 
-#menu-btn:hover::after {
-  bottom: -70%;
-  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
-  background-position: 50% 0%;
-  animation: greenbottomBubbles 0.6s ease;
+.animated-button:hover .arr-1 {
+  right: -25%;
 }
 
-@keyframes greenbottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
-  }
-
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-      105% 0%;
-  }
-
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-      110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
+.animated-button:hover .arr-2 {
+  left: 16px;
 }
 
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #1f387e;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+
+ 
   #our-story {
     display: flex;
     flex-direction: column;
@@ -421,21 +420,7 @@
     transform: scale(1.1);
   }
 
-   .main-image > button {
-     padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgb(65, 55, 45);
-    color: white;
-    font-weight: bold;
-    font-family: "jost";
-  }
-
-  .main-image > button:hover {
-     background-color: rgb(250, 227, 201);
-    color: #333;
-    transition: 0.4s;
-  }
+   
 
   #visit-us {
     display: flex;
@@ -510,7 +495,7 @@
   }
 
   main {
-    font-family: jost, lobster;
+    font-family: "jamjuree", "jost", "lobster", "jamjuree-light", sans-serif;
     color: #333;
     position: relative;
     margin: 0;
@@ -548,12 +533,52 @@
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 19px;
   }
+
+    .container{
+    background-image: url(public/img/afang.jfif);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 800px;
+    height: 650px;
+    overflow: hidden;
+    background-size: cover;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+  }
+
+
+  @keyframes change {
+    0%{
+      background-image: url(public/img/afang.jfif);
+    }
+
+    25%{
+      background-image: url(public/img/jellof.jpg);
+    }
+
+    50%{
+      background-image: url(public/img/moi-moi-rollup.jpg);
+    }
+
+    75%{
+      background-image: url(public/img/vegetable.jpg);
+    }
+
+    100%{
+      background-image: url(public/img/afang.jfif);
+    }
+  }
+
 
   .nav-links > li > a:hover {
     color: #5f2828;
     font-weight: bold;
-    transition: 0.5s;
+    transition: 0.9s;
+    padding: 30px 0px;
+    border-top: 2px  solid #5f2828;
+    border-bottom: 2px solid  #5f2828;
   }
 
   .nav-links {
@@ -594,30 +619,94 @@
     justify-content: center;
   }
 
-  #menu-btn {
-    padding: 12px;
-    width: 120px;
-    border: none;
-    border-radius: 15px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: rgb(250, 238, 197);
-  }
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: ;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #1f387e;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-  #menu-btn:hover {
-    background-color: rgb(65, 55, 45);
-    color: white;
-    transform: translateY(-7px);
-    transition: 0.7s;
-    filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.25));
-  }
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #1f387e;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-  #hero-right > img {
-    width: 700px;
-    border-radius: 170px;
-    object-fit: fill;
-    filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.25));
-  }
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #c5e5e4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #1f387e;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
 
   #our-story {
     background-color: white;
@@ -735,6 +824,11 @@
     font-size: 38px;
   }
 
+  .menu{
+    display: flex;
+    justify-content: center;
+  }
+
   #gallery-heading {
     display: flex;
     flex-direction: column;
@@ -752,7 +846,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
   }
 
   .main-image {
@@ -780,8 +874,8 @@
   }
 
   .thumb-row img {
-    width: 80px;
-    height: 60px;
+    width: 120px;
+    height: 100px;
     border-radius: 8px;
     cursor: pointer;
     opacity: 0.7;
@@ -794,8 +888,8 @@
   }
 
   .nav-btn {
-    font-size: 30px;
-    padding: 5px 12px;
+    font-size: 90px;
+    padding: 5px 100px;
     cursor: pointer;
     border: none;
     background: none;
@@ -811,21 +905,6 @@
     font-size: 24px;
   }
 
-  .main-image > button {
-    margin-top: 15px;
-    font-size: 16px;
-    padding: 13px;
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(250, 238, 197);
-    font-weight: bold;
-  }
-  .main-image > button:hover {
-    background-color: rgb(65, 55, 45);
-    color: white;
-    transform: translateY(-7px);
-    transition: 0.7s;
-  }
 
   #visit-us {
     padding-bottom: 150px;
