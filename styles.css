@@ -91,14 +91,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 75vh;
     width: 90%;
     background: rgba(65, 55, 45, 0.98);
     backdrop-filter: blur(30px);
     opacity: 1;
     visibility: hidden;
     transition: all 0.5s ease;
-    z-index: 1000;
+    z-index: 2000;
     padding: 34px;
 }
 
@@ -193,6 +193,7 @@
  .animated-button {
   position: relative;
   display: flex;
+  z-index: 1 !;
   align-items: center;
   gap: 4px;
   width: fit-content;
@@ -760,7 +761,7 @@
   }
   #story-main {
     display: flex;
-    gap: 170px;
+    gap: 80px;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
